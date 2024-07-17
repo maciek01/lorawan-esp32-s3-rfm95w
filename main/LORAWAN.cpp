@@ -29,12 +29,16 @@
 // AppEUI (sometimes called JoinEUI)
 const char *appEui = "0000000000000000";
 // DevEUI
-//const char *devEui = "ab493c97ea90bed3"; // CHIRP
-const char *devEui = "70B3D57ED0064033"; // TTN
+const char *devEui = "ab493c97ea90bed3"; // CHIRP
+//const char *devEui = "70B3D57ED0064033"; // TTN
 
 // AppKey
-//const char *appKey = "d2a438a643017caa73d7fb74532152b6";// CHIRP
-const char *appKey = "2A79C77D5B0CFE48DA45AFB64E06DAA6";// TTN
+const char *appKey = "d2a438a643017caa73d7fb74532152b6";// CHIRP
+//const char *appKey = "2A79C77D5B0CFE48DA45AFB64E06DAA6";// TTN
+
+// AppKey
+const char *wifiName = "lorawan-chirp";// CHIRP
+//const char *wifiName = "lorawan-ttn";// TTN
 
 // Pins and other resources
 //SPI
@@ -81,7 +85,7 @@ extern "C" void app_main(void)
 {
 
     //connect to WIFI
-    connectWIFI("lorawan");
+    connectWIFI(wifiName);
 
 
     esp_err_t err;
